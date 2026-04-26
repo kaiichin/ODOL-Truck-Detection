@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ODOL Truck Detector</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1>ODOL Truck Detector</h1>
+        <p>Upload a truck image to check if it's overloaded</p>
+
+        <div class="glass-card">
+            <label class="drop-zone" id="dropZone" for="imageUpload">
+                <span class="drop-icon">📷</span>
+                <span class="drop-text">Drag & drop image here or <strong>browse</strong></span>
+                <span class="drop-hint" id="fileName">No file selected</span>
+                <input type="file" id="imageUpload" accept="image/*" hidden>
+            </label>
+
+            <button id="detectBtn">Detect</button>
+            <div id="result"></div>
+        </div>
+
+        <img id="preview" style="display: none;">
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+
+</html>

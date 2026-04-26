@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #0a0a1a 0%, #1a1035 50%, #0d1f2d 100%);
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 60px 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    width: 100%;
+}
+
+/* Typewriter title */
+h1 {
+    font-family: 'Courier New', monospace;
+    font-size: 2.2rem;
+    margin-bottom: 8px;
+    overflow: hidden;
+    border-right: 3px solid #fff;
+    white-space: nowrap;
+    width: 0;
+    animation:
+        typewriter 2s steps(19, end) forwards,
+        blinkingCursor 0.75s step-end infinite;
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 19ch;
+    }
+}
+
+@keyframes blinkingCursor {
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: #fff;
+    }
+}
+
+p {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 0.95rem;
+}
+
+/* Glassmorphism Card */
+.glass-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 40px;
+    width: 100%;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+/* Drop Zone */
+.drop-zone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 180px;
+    border: 2px dashed rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.drop-zone:hover {
+    border-color: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.drop-zone.drag-over {
+    border-color: #3b82f6;
+    background: rgba(59, 130, 246, 0.1);
+}
+
+.drop-icon {
+    font-size: 2.5rem;
+}
+
+.drop-text {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.drop-text strong {
+    color: #3b82f6;
+}
+
+.drop-hint {
+    color: #555;
+    font-size: 0.8rem;
+}
+
+/* Detect Button */
+#detectBtn {
+    width: 100%;
+    padding: 14px;
+    margin-top: 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#detectBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(59, 130, 246, 0.4);
+}
+
+/* Result */
+#result {
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+/* Preview Image */
+#preview {
+    border-radius: 16px;
+    max-width: 100%;
+    width: 100%;
+    margin-top: 30px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+}
