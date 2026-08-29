@@ -1,0 +1,24 @@
+# Datasets and generated outputs
+dataset/
+datasets/
+runs/
+results/
+outputs/
+
+# Model weights belong in GitHub Releases
+*.pt
+*.keras
+*.h5
+
+# Keep only best model in releases, never training checkpoint
+last.pt
+
+# Notebook and Python cache
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+
+# Video test files
+*.mp4
+*.avi
+*.mov
