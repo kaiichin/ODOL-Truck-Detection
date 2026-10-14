@@ -11,9 +11,9 @@ A two-stage computer-vision system for screening trucks as **ODOL** or **NOT ODO
 
 | Notebook | Purpose | Colab |
 |---|---|---|
-| YOLOv8m Truck Detection | Clean grouped dataset, train detector, evaluate test set | [Open](https://colab.research.google.com/github/kaiichin/ODOL-Truck-Detection/blob/main/notebooks/01_YOLOv8m_Truck_Detection.ipynb) |
-| MobileNetV2 ODOL Classification | Create truck crops, train classifier, evaluate test set | [Open](https://colab.research.google.com/github/kaiichin/ODOL-Truck-Detection/blob/main/notebooks/02_MobileNetV2_ODOL_Classification.ipynb) |
-| Image and Video Pipeline | Run both models on uploaded images or MP4 videos | [Open](https://colab.research.google.com/github/kaiichin/ODOL-Truck-Detection/blob/main/notebooks/03_ODOL_Image_Video_Pipeline.ipynb) |
+| YOLOv8m Truck Detection | Clean grouped dataset, train detector, evaluate test set | [Open](https://colab.research.google.com/drive/1nKlu7S08mjkCd_IDzjOKZxR13hph3wfu?usp=sharing) |
+| MobileNetV2 ODOL Classification | Create truck crops, train classifier, evaluate test set | [Open](https://colab.research.google.com/drive/1Z54vTQMAd9XROAza_Hm4fX_5fXsqL37G?usp=sharing) |
+| Image and Video Pipeline | Run both models on uploaded images or MP4 videos | [Open](https://colab.research.google.com/drive/1sxt-qZ5TXp77SrZuVLe6p-k1_AP6C5M_?usp=sharing) |
 
 ## Latest results
 
