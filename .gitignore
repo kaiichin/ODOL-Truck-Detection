@@ -5,10 +5,15 @@ runs/
 results/
 outputs/
 
-# Model weights belong in GitHub Releases
+# Model weights - allowed only in Weights/ so folder shows on GitHub
 *.pt
 *.keras
 *.h5
+!Weights/
+!Weights/**
+!Weights/*.pt
+!Weights/*.keras
+!Weights/*.h5
 
 # Keep only best model in releases, never training checkpoint
 last.pt
