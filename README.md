@@ -11,9 +11,9 @@ A two-stage computer-vision system for screening trucks as **ODOL** or **NOT ODO
 
 | Notebook | Purpose | Colab |
 |---|---|---|
-| YOLOv8m Truck Detection | Clean grouped dataset, train detector, evaluate test set | [Open](https://colab.research.google.com/github/kaiichin/ODOL-Truck-Detection/blob/main/notebooks/01_YOLOv8m_Truck_Detection.ipynb) |
-| MobileNetV2 ODOL Classification | Create truck crops, train classifier, evaluate test set | [Open](https://colab.research.google.com/github/kaiichin/ODOL-Truck-Detection/blob/main/notebooks/02_MobileNetV2_ODOL_Classification.ipynb) |
-| Image and Video Pipeline | Run both models on uploaded images or MP4 videos | [Open](https://colab.research.google.com/github/kaiichin/ODOL-Truck-Detection/blob/main/notebooks/03_ODOL_Image_Video_Pipeline.ipynb) |
+| YOLOv8m Truck Detection | Clean grouped dataset, train detector, evaluate test set | [Open](https://colab.research.google.com/drive/1nKlu7S08mjkCd_IDzjOKZxR13hph3wfu?usp=sharing) |
+| MobileNetV2 ODOL Classification | Create truck crops, train classifier, evaluate test set | [Open](https://colab.research.google.com/drive/1Z54vTQMAd9XROAza_Hm4fX_5fXsqL37G?usp=sharing) |
+| Image and Video Pipeline | Run both models on uploaded images or MP4 videos | [Open](https://colab.research.google.com/drive/1sxt-qZ5TXp77SrZuVLe6p-k1_AP6C5M_?usp=sharing) |
 
 ## Latest results
 
@@ -21,11 +21,11 @@ A two-stage computer-vision system for screening trucks as **ODOL** or **NOT ODO
 
 | Metric | Result |
 |---|---:|
-| Precision | 0.9481 |
-| Recall | 0.8700 |
-| F1 score | 0.9074 |
-| mAP50 | 0.9363 |
-| mAP50–95 | 0.8144 |
+| Precision | 0.9618 |
+| Recall | 0.8725 |
+| F1 score | 0.9150 |
+| mAP50 | 0.9386 |
+| mAP50–95 | 0.8222 |
 
 The YOLO dataset contains 1,769 annotated images. Original and augmented images are grouped by removing `.rf.HASH` before the 70/15/15 split to prevent data leakage.
 
@@ -33,19 +33,19 @@ The YOLO dataset contains 1,769 annotated images. Original and augmented images 
 
 | Metric | Result |
 |---|---:|
-| Accuracy | 0.9024 |
-| Precision | 0.8889 |
-| Recall | 0.9600 |
-| F1 score | 0.9231 |
+| Accuracy | 0.9056 |
+| Precision | 0.8917 |
+| Recall | 0.9032 |
+| F1 score | 0.8974 |
 
 Confusion matrix:
 
 ```text
-[[13  3]
- [ 1 24]]
+[[167  17]
+ [ 15 140]]
 ```
 
-The held-out MobileNetV2 test set contains only 41 crops, so one prediction changes accuracy by about 2.44 percentage points.
+The held-out MobileNetV2 test set contains 339 crops, so one prediction changes accuracy by about 0.30 percentage points.
 
 ## Image and video pipeline
 
@@ -72,20 +72,25 @@ Video mode includes:
 ## Repository structure
 
 ```text
-notebooks/
-├── 01_YOLOv8m_Truck_Detection.ipynb
-├── 02_MobileNetV2_ODOL_Classification.ipynb
-└── 03_ODOL_Image_Video_Pipeline.ipynb
+MobilenetV2/
+└── MobileNetV2_Truck_Detection_(new_code).ipynb
+ODOL Pipeline/
+└── ODOL_Pipeline_NewCode.ipynb
+Weights/
+├── best.pt
+└── mobilenet_odol_classifier(V2).keras
+YOLOv8m/
+└── YOLO_Truck_Detection_(new_code).ipynb
 ```
 
-Datasets, generated runs, output videos, `last.pt`, and model weights are not committed.
+Datasets, generated runs, output videos, and `last.pt` are not committed. The model weights listed above are included in this repository.
 
 ## Model weights
 
-The pipeline downloads these assets from the [`v2.0.0` GitHub Release](https://github.com/kaiichin/ODOL-Truck-Detection/releases/tag/v2.0.0):
+The pipeline loads these model files, which are available in the [`Weights/`](Weights/) folder. When running the pipeline notebook in Colab, upload both files when prompted:
 
 - `best.pt`
-- `mobilenet_odol_classifier.keras`
+- `mobilenet_odol_classifier(V2).keras`
 
 ## Datasets
 
